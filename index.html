@@ -2,15 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Document Tracker</title>
-    <!-- Configures your unique Supabase Database link safely -->
-    <script>
-        window.SUPABASE_URL = "https://supabase.co";
-        window.SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh2emlzcGltY2NxdGpydXJhanlmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg1NDEyMzYsImV4cCI6MjEwNDExNzIzNn0.xp_4SwRzM1yaYIp9hY0VHagOx4nSqE57k2_2W3NLlcc";
-    </script>
-    <!-- Loads your complete, unbroken A4 Invoicing software -->
-    <script src="https://pages.dev"></script>
+    <!-- Combined styling sheets and database wrappers -->
+    <script src="https://tailwindcss.com"></script>
+    <script src="https://jsdelivr.net"></script>
+    <script src="https://cloudflare.com"></script>
 </head>
-<body class="bg-slate-50 min-h-screen">
+<body class="bg-slate-900 text-slate-100 flex items-center justify-center min-h-screen">
+
+    <!-- Immutable Security Verification Shield -->
+    <div class="bg-slate-800 p-8 rounded-2xl shadow-xl w-full max-w-md mx-4 border border-slate-700">
+        <h2 class="text-xl font-bold mb-1 text-white tracking-tight">System access required</h2>
+        <p class="text-xs text-slate-400 mb-6">Reza bin Mohd Rashid | Private Financial Ledger</p>
+        
+        <form id="loginForm" class="space-y-4">
+            <div>
+                <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-1">Email address</label>
+                <input type="email" id="authEmail" required class="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-700 focus:outline-none focus:border-blue-500 text-sm text-white">
+            </div>
+            <div>
+                <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-1">Password</label>
+                <input type="password" id="authPassword" required class="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-700 focus:outline-none focus:border-blue-500 text-sm text-white">
+            </div>
+            <div id="authError" class="text-xs text-red-400 hidden bg-red-950/50 p-3 rounded-xl border border-red-900"></div>
+            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl transition text-sm cursor-pointer shadow-lg shadow-blue-900/20">Verify Credentials</button>
+        </form>
+    </div>
+
+    <!-- Script Injection Link -->
+    <script src="setup.js"></script>
 </body>
 </html>
